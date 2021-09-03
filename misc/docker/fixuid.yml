@@ -1,0 +1,5 @@
+user: etrex
+group: etrex
+paths:
+  - /home/etrex
+  - /home/etrex/maps

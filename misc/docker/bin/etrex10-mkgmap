@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -eo pipefail
+
+java \
+    -jar /opt/mkgmap/mkgmap-r4806/mkgmap.jar \
+    --latin1 \
+    --style-file=/opt/etrex10-map/style10.zip \
+    --description="$1" \
+    --family-id=9999 \
+    --gmapsupp $2 \
+    /opt/etrex10-map/e10.txt
+
+mv -f gmapsupp.img gmapbmap.img
+ls -lah gmapbmap.img
